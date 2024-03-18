@@ -10,6 +10,8 @@ import IsPrivate from './components/IsPrivate'
 import CreatePage from './pages/CreatePage'
 import EditPage from './pages/EditPage'
 import SinglePage from './pages/SinglePage'
+import CreatePagePage from './pages/CreatePagePage'
+import SinglePagePage from './pages/SinglePagePage'
 
 function App() {
 
@@ -27,6 +29,8 @@ function App() {
         <Route path='/dashboard'  element={<IsPrivate > <DashBoard/> </IsPrivate>} />
         <Route path='/create'  element={<IsPrivate > <CreatePage/> </IsPrivate>} />
         <Route path='/edit/:id'  element={<IsPrivate > <EditPage/> </IsPrivate>} />
+        <Route path='/page/create'  element={<IsPrivate > <CreatePagePage/> </IsPrivate>} />
+        <Route path='/page/:id'  element={<SinglePagePage/>} />
       </Routes>
       </main>  
     </>
